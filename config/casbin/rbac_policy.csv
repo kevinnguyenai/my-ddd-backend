@@ -1,0 +1,22 @@
+p, role:create, User, user_data, create
+p, role:read, User, user_data, read
+p, role:write, User, user_data, write
+p, role:delete, User, user_data, delete
+p, role:create, Profile, profile_data, create
+p, role:read, Profile, profile_data, read
+p, role:write, Profile, profile_data, write
+p, role:delete, Profile, profile_data, delete
+
+g, role:global_admin, role:create, User
+g, role:global_admin, role:read, User
+g, role:global_admin, role:write, User
+g, role:global_admin, role:delete, User
+g, role:global_guest, role:create, User
+g, role:global_user, role:read,  User
+g, role:global_user, role:read,  Profile
+g, role:global_user, role:write, Profile
+g, role:global_user, role:delete, Profile
+
+g, admin, role:global_admin, User
+g, fakeadmin, role:global_user, Profile
+g, guest, role:global_guest, User
